@@ -481,6 +481,14 @@ void Node::set_i(double i)
     m_i = deg2rad(i);
     m_initList.set(Field_i);
 }
+double Node::getInclination()
+{
+	return this->i();
+}
+void Node::setInclination(double i)
+{
+	this->set_i(i);
+}
 //------------------------------------------------------------------------------
 
 double Node::Omega() const
@@ -614,12 +622,20 @@ double Node::e() const
 
     return m_e;
 }
-//------------------------------------------------------------------------------
 
 void Node::set_e(double e)
 {
     m_e = e;
     m_initList.set(Field_e);
+}
+
+double Node::getEccentricity()
+{
+	return this->e();
+}
+void Node::setEccentricity(double e)
+{
+	this->set_e(e);
 }
 //------------------------------------------------------------------------------
 

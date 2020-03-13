@@ -148,6 +148,9 @@ public:
     double i() const;
     //! Set the Inclination [Radians]
     void set_i(double i);
+    double getInclination();
+    void setInclination(double i);
+    
     /*!
         Get the Right Ascension of the Ascending Node [Radians]
         \see http://celestrak.com/NORAD/documentation/tle-fmt.asp
@@ -183,6 +186,9 @@ public:
     double e() const;
     //! Set the Eccentricity [Radians]
     void set_e(double e);
+    double getEccentricity();
+    void setEccentricity(double e);
+    
     /*!
         Get the Classification
         \see http://celestrak.com/NORAD/documentation/tle-fmt.asp
