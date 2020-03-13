@@ -478,7 +478,7 @@ double Node::i() const
 
 void Node::set_i(double i)
 {
-    m_i = i;
+    m_i = deg2rad(i);
     m_initList.set(Field_i);
 }
 //------------------------------------------------------------------------------
@@ -534,7 +534,7 @@ double Node::omega() const
 
 void Node::set_omega(double omega)
 {
-    m_omega = omega;
+    m_omega = deg2rad(omega);
     m_initList.set(Field_omega);
 }
 //------------------------------------------------------------------------------
@@ -562,7 +562,7 @@ double Node::M() const
 
 void Node::set_M(double M)
 {
-    m_M = M;
+    m_M = deg2rad(M);
     m_initList.set(Field_M);
 }
 //------------------------------------------------------------------------------
@@ -823,7 +823,8 @@ std::string Node::thirdString() const
     res += double2string(rad2deg(normalizeAngle(omega())), 8, 4, false, false, false) +
            " ";
     res += double2string(rad2deg(normalizeAngle(M())), 8, 4, false, false, false) + " ";
-    res += double2string(n() * SECS_IN_DAY / 2 / M_PI, 11, 8, false, false, false);
+//    res += double2string(n() * SECS_IN_DAY / 2 / M_PI, 11, 8, false, false, false);
+    res += double2string(n(), 11, 8, false, false, false);
     res += int2string(revolutionNumber(), 5, false);
 
     // Checksum
