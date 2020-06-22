@@ -510,12 +510,18 @@ double Node::Omega() const
 
     return m_Omega;
 }
-//------------------------------------------------------------------------------
-
 void Node::set_Omega(double Omega)
 {
-    m_Omega = Omega;
+    m_Omega = deg2rad(Omega);
     m_initList.set(Field_Omega);
+}
+double Node::getRightAscensionAscendingNode()
+{
+	return this->Omega();
+}
+void Node::setRightAscensionAscendingNode(double raan)
+{
+	this->set_Omega(raan);
 }
 //------------------------------------------------------------------------------
 

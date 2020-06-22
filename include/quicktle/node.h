@@ -158,6 +158,8 @@ public:
     double Omega() const;
     //! Set the Right Ascension of the Ascending Node [Radians]
     void set_Omega(double Omega);
+    double getRightAscensionAscendingNode();
+    void setRightAscensionAscendingNode(double raan);
     /*!
         Get the Argument of Perigee [Radians]
         \see http://celestrak.com/NORAD/documentation/tle-fmt.asp
